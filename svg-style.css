@@ -1,0 +1,323 @@
+/* svg, animation elements */
+.animation {
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	opacity: 1;
+}
+.tap-element {
+	animation-name: tapAnimation;
+	animation-duration: 4500ms;
+}
+.press-element {
+	animation-name: pressAnimation;
+	animation-duration: 4000ms;
+}
+.fast-element {
+	animation-name: fastAnimation;
+	animation-duration: 3000ms;
+}
+#text {
+	animation-name: shake;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 700ms;
+	transform-origin: 50% 50%;
+}
+#left-vibrate, #right-vibrate {
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 700ms;
+	transform-origin: 50% 50%;
+}
+#left-vibrate {
+	animation-name: vibrationLeft;
+}
+#right-vibrate {
+	animation-name: vibrationRight;
+}
+#logo {
+	transform: translateY(-80px);
+}
+#broken-heart {
+	animation-name: heartbeats;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 2000ms;
+}
+#heart1, #heart2, #heart3, #heart4, #heart5, #heart6 {
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+#heart1 {
+	animation-name: heartOne;
+	animation-duration: 5200ms;
+}
+#heart2 {
+	animation-name: heartTwo;
+	animation-duration: 4800ms;
+}
+#heart3 {
+	animation-name: heartThree;
+	animation-duration: 5800ms;
+}
+#heart4 {
+	animation-name: heartFour;
+	animation-duration: 5500ms;
+}
+#heart5 {
+	animation-name: heartFive;
+	animation-duration: 6000ms;
+}
+#heart6 {
+	animation-name: heartSix;
+	animation-duration: 6200ms;
+}
+.anim-line {
+	animation-name: loader;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #FFF;
+	width: 280px;
+	height: 20px;
+	overflow: hidden;
+	animation-duration: 15.5s;
+	animation-timing-function: linear;
+	border: 1px solid #FD9BAD;
+	border-radius: 13px;
+	box-shadow: 0px 7px 15px #999;
+}
+#timeline {
+	opacity: 0;
+}
+/*portrait*/
+@media (orientation: landscape) {
+	#timeline {
+		opacity: 1;
+	}
+}
+/* keyframes */
+@keyframes loader {
+   0% {
+		box-shadow: 0 0 0 0 #FD9BAD inset;
+   }
+   100% {
+		box-shadow: 280px 0 0 0 #FD9BAD inset;
+   }
+}
+@keyframes heartOne {
+	0% {
+		transform: translate(-120px, 700px) scale(0.7);
+	}
+	20% {
+		transform: translate(-90px, 400px) scale(0.7);
+	}
+	40% {
+		transform: translate(-150px, 100px) scale(0.7);
+	}
+	60% {
+		transform: translate(-90px, -100px) scale(0.7);
+	}
+	80% {
+		transform: translate(-150px, -400px) scale(0.7);
+	}
+	100% {
+		transform: translate(-90px, -700px) scale(0.7);
+	}
+}
+@keyframes heartTwo {
+	0% {
+		transform: translate(220px, 700px) scale(0.6);
+	}
+	25% {
+		transform: translate(190px, 400px) scale(0.6);
+	}
+	50% {
+		transform: translate(220px, 100px) scale(0.6);
+	}
+	75% {
+		transform: translate(190px, -100px) scale(0.6);
+	}
+	100% {
+		transform: translate(220px, -700px) scale(0.6);
+	}
+}
+@keyframes heartThree {
+	0% {
+		transform: translate(320px, 800px) scale(0.6);
+	}
+	20% {
+		transform: translate(290px, 600px) scale(0.7);
+	}
+	40% {
+		transform: translate(350px, 300px) scale(0.6);
+	}
+	60% {
+		transform: translate(290px, 100px) scale(0.7);
+	}
+	80% {
+		transform: translate(350px, -200px) scale(0.6);
+	}
+	100% {
+		transform: translate(290px, -600px) scale(0.7);
+	}	
+}
+@keyframes heartFour {
+	0% {
+		transform: translate(120px, 900px) scale(0.6);
+	}
+	25% {
+		transform: translate(90px, 700px) scale(0.6);
+	}
+	50% {
+		transform: translate(120px, 400px) scale(0.6);
+	}
+	75% {
+		transform: translate(90px, 100px) scale(0.6);
+	}
+	100% {
+		transform: translate(120px, -500px) scale(0.6);
+	}
+}
+@keyframes heartFive {
+	0% {
+		transform: translate(0px, 900px) scale(0.6);
+	}
+	25% {
+		transform: translate(30px, 700px) scale(0.6);
+	}
+	50% {
+		transform: translate(-60px, 400px) scale(0.6);
+	}
+	75% {
+		transform: translate(30px, 100px) scale(0.6);
+	}
+	100% {
+		transform: translate(-60px, -500px) scale(0.6);
+	}
+}
+@keyframes heartSix {
+	0% {
+		transform: translate(200px, 800px) scale(0.6);
+	}
+	25% {
+		transform: translate(250px, 600px) scale(0.6);
+	}
+	50% {
+		transform: translate(150px, 300px) scale(0.6);
+	}
+	75% {
+		transform: translate(250px, 100px) scale(0.6);
+	}
+	100% {
+		transform: translate(150px, -400px) scale(0.6);
+	}
+}
+@keyframes shake {
+	0% {
+		transform: translateY(300px) rotate(3deg);
+	}
+	50% {
+		transform: translateY(300px) rotate(-3deg);
+	}
+	100% {
+		transform: translateY(300px) rotate(3deg);
+	}
+}
+@keyframes vibrationLeft {
+	0% {
+		transform: translate(-260px, 270px);
+	}
+	50% {
+		transform: translate(-255px, 265px);
+	}
+	100% {
+		transform: translate(-260px, 270px);
+	}
+}
+@keyframes vibrationRight {
+	0% {
+		transform: translate(260px, 330px)
+	}
+	50% {
+		transform: translate(265px, 325px);
+	}
+	100% {
+		transform: translate(260px, 330px);
+	}
+}
+@keyframes heartbeats {
+	0% {
+		transform: translate(40px, -50px) scale(0.9);
+	}
+	20% {
+		transform: translate(10px, -50px) scale(1);
+	}
+	40% {
+		transform: translate(40px, -50px) scale(0.9);
+	}
+	60% {
+		transform: translate(10px, -50px) scale(1);
+	}
+	80% {
+		transform: translate(40px, -50px) scale(0.9);
+	}
+	100% {
+		transform: translate(40px, -50px) scale(0.9);
+	}
+}
+@keyframes tapAnimation { 
+	0% { 
+		transform: translate(0px, 400px) scale(0.6);
+	} 
+	25% {
+		transform: translate(30px,300px) scale(1);
+	}
+	50% {
+		transform: translate(-50px,200px) scale(0.6);
+	}
+	75% {
+		transform: translate(0px,100px) scale(1);
+	}
+	95% {
+		opacity: 0.9;
+	}
+	100% {
+		transform: translate(-30px, 50px) scale(0.6);
+		opacity: 0;
+	}
+}
+@keyframes pressAnimation { 
+	0% {
+		transform: translate(80px, 0px) rotate(0deg);
+	}
+	25% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		transform: translate(80px, 0px) rotate(360deg);
+		opacity: 1;
+	}
+}
+@keyframes fastAnimation {
+	0% {
+		transform: translate(-40px, 300px) scale(0.4);
+	}
+	30% {
+		transform: translate(50px, 100px) scale(0.5);
+	}
+	60% {
+		transform: translate(-30px, 0px) scale(0.4);
+	}
+	100% {
+		transform: translate(30px, -200px) scale(0.5);
+	}
+}
